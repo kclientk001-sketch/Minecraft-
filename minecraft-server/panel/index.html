@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Ryuuworl · Bảng điều khiển</title><link rel="stylesheet" href="/panel.css"><script src="/panel.js" defer></script></head>
+<body>
+<header><a class="brand" href="/"><span class="cube" aria-hidden="true"></span><span>RYUUWORL<small>MINECRAFT SERVER</small></span></a><span class="local">● Trên thiết bị này</span></header>
+<main>
+<section id="login" class="login-card">
+<p class="eyebrow">QUẢN TRỊ SERVER</p><h1 id="login-title">Đang mở bảng điều khiển…</h1><p id="login-description" class="muted">Kiểm tra phiên quản trị của bạn.</p>
+<form id="login-form" hidden><label for="password">Mật khẩu quản trị</label><input id="password" type="password" minlength="8" maxlength="128" required autocomplete="current-password"><div id="confirmation" hidden><label for="confirm-password">Nhập lại mật khẩu</label><input id="confirm-password" type="password" minlength="8" maxlength="128" autocomplete="new-password"></div><button id="login-submit" class="primary" type="submit">Mở bảng điều khiển</button></form>
+<p id="login-error" role="alert" class="error"></p><p class="fine">Mật khẩu quản trị này dùng cho bảng điều khiển, tách riêng tài khoản người chơi trong game.</p>
+</section>
+<section id="dashboard" hidden>
+<div class="title-row"><div><p class="eyebrow">BẢNG ĐIỀU KHIỂN</p><h1>Ryuuworl Survival</h1><p class="muted">Java + Bedrock · Chung một thế giới</p></div><button id="logout" class="quiet">Đăng xuất</button></div>
+<div class="stats"><article><span class="stat-label">Trạng thái</span><strong id="server-state" aria-live="polite">Đang kiểm tra</strong><small id="state-detail">Đang nhận dữ liệu server</small></article><article><span class="stat-label">Người chơi</span><strong id="players">— / —</strong><small>Đang trực tuyến / tối đa</small></article><article><span class="stat-label">World</span><strong>1.21.11</strong><small>Paper · Survival</small></article></div>
+<div class="workspace"><section class="console card"><div class="console-top"><div><span class="led" id="led"></span><h2>Console trực tiếp</h2></div><label class="pause"><input id="pause" type="checkbox"> Tạm dừng log</label></div><pre id="logs" tabindex="0">Đang tải log server…</pre><form id="command-form"><label class="sr-only" for="command">Lệnh console</label><span class="prompt" aria-hidden="true">&gt;</span><input id="command" autocomplete="off" spellcheck="false" placeholder="Nhập lệnh, ví dụ: list" maxlength="500" required><button class="primary" id="send-command">Gửi lệnh</button></form></section>
+<aside><section class="card controls"><p class="eyebrow">ĐIỀU KHIỂN</p><button id="start" class="primary wide">▶ Bật server</button><button id="stop" class="danger wide">■ Lưu & dừng server</button><div class="divider"></div><h2>Lệnh nhanh</h2><button class="quick wide" data-command="list">Người chơi đang online</button><button class="quick wide" data-command="save-all">Lưu thế giới</button><button class="quick wide" data-command="plugins">Danh sách plugin</button></section><section class="card connection"><p class="eyebrow">KẾT NỐI TRONG WI-FI</p><h2>Java</h2><code>192.168.1.172:25565</code><p id="java-status" class="muted">Đang kiểm tra…</p><h2>Bedrock</h2><code>192.168.1.172 · 19132</code><p id="bedrock-status" class="muted">Đang kiểm tra…</p><p class="fine">Java 1.21–26.3<br>Bedrock 26.30–26.52</p></section></aside></div>
+<p class="footer">Bảng quản trị chạy cục bộ. Tên miền ryuuworl.id.vn chưa được kết nối tới game từ Internet.</p>
+</section>
+<div id="toast" role="status" hidden></div>
+</main></body></html>

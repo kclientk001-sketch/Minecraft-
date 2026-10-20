@@ -1,0 +1,15 @@
+{
+  "name": "ryuuworl-minecraft",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Minecraft Ryuuworl dành cho OneShield Pages Preview.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/app.js && node --check scripts/build.mjs && node --check scripts/generate-art.mjs && node --check scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs",
+    "prepare:preview": "python3 scripts/prepare-preview.py",
+    "preflight:preview": "python3 scripts/check-oneshield.py"
+  },
+  "engines": { "node": ">=20" }
+}

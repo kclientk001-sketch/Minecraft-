@@ -1,0 +1,35 @@
+.env
+
+.env.*
+!.env.example
+node_modules/
+dist/
+release/
+__pycache__/
+*.pyc
+.dist-build/
+.build-tools/
+
+# Generated artifacts and private runtime data
+**/.git/
+**/.runtime/
+**/logs/
+**/.next/
+**/.inet-build/
+**/inet-site/
+**/coverage/
+**/test-results*/
+**/playwright-report/
+*.tsbuildinfo
+*.jar
+*.zip
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Live Minecraft settings are generated locally from checked-in defaults.

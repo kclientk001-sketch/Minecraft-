@@ -1,0 +1,15 @@
+{
+  "scope": "npm audit --omit=dev",
+  "vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "overrides": {
+    "deepmerge-ts": "8.0.0",
+    "effect": "^3.20.0"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "selected_at": "2026-10-19",
+  "java_major": 21,
+  "minecraft": "1.21.11",
+  "artifacts": [
+    {
+      "component": "Paper",
+      "version": "1.21.11",
+      "build": 132,
+      "channel": "STABLE",
+      "file": "paper.jar",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba"
+    },
+    {
+      "component": "Geyser-Spigot",
+      "version": "2.12.0",
+      "build": 1265,
+      "file": "plugins/Geyser-Spigot.jar",
+      "url": "https://download.geysermc.org/v2/projects/geyser/versions/2.12.0/builds/1265/downloads/spigot",
+      "sha256": "7b4054c4792f76b34ce88c43871555c5e9774898ff8d1c269e4f0b39c758eba2"
+    },
+    {
+      "component": "Floodgate-Spigot",
+      "version": "2.2.5",
+      "build": 141,
+      "file": "plugins/floodgate-spigot.jar",
+      "url": "https://download.geysermc.org/v2/projects/floodgate/versions/2.2.5/builds/141/downloads/spigot",
+      "sha256": "21570aff9ce17d6983928e8552777760e1ede5050026b04c686b0ae112e6fd7e"
+    },
+    {
+      "component": "ViaVersion",
+      "version": "5.12.1",
+      "file": "plugins/ViaVersion.jar",
+      "url": "https://github.com/ViaVersion/ViaVersion/releases/download/5.12.1/ViaVersion-5.12.1.jar",
+      "sha256": "b8033807e7182c35003a45962352dd642c1e91880ca281da3a43cb6f481a95a2"
+    },
+    {
+      "component": "ViaBackwards",
+      "version": "5.12.1",
+      "file": "plugins/ViaBackwards.jar",
+      "url": "https://github.com/ViaVersion/ViaBackwards/releases/download/5.12.1/ViaBackwards-5.12.1.jar",
+      "sha256": "29d94d3a26c85c8a327574b2322db4078992ae457f0173325431a12aac384911"
+    },
+    {
+      "component": "AuthMe-Paper",
+      "version": "6.0.1",
+      "file": "plugins/AuthMe.jar",
+      "url": "https://github.com/AuthMe/AuthMeReloaded/releases/download/6.0.1/AuthMe-6.0.1-Paper.jar",
+      "sha256": "7704335e9e73a634d9d926344f77897f4c74f78f82453a59f5aa0f8d2722450a"
+    }
+  ]
+}

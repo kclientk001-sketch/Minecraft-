@@ -1,0 +1,27 @@
+bedrock:
+  address: 0.0.0.0
+  port: 19132
+  webrtc-port: 19133
+  transport: both
+  clone-remote-port: false
+  signaling:
+    mode: builtin
+    builtin:
+      advertise-addresses: []
+java:
+  auth-type: floodgate
+motd:
+  primary-motd: Ryuuworl
+  secondary-motd: Java + Bedrock Survival
+  passthrough-motd: true
+  passthrough-player-counts: true
+  max-players: 5
+  integrated-ping-passthrough: true
+gameplay:
+  server-name: Ryuuworl
+  show-coordinates: true
+log-player-ip-addresses: false
+saved-user-logins: []
+notify-on-new-bedrock-update: true
+debug-mode: false
+config-version: 10

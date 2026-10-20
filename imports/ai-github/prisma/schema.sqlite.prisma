@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "sqlite"
+  url = env("DATABASE_URL")
+}
+model User {
+ id String @id @default(cuid())
+ email String @unique
+ name String
+ passwordHash String
+ role String @default("EDITOR")
+ active Boolean @default(true)
+ sessions Session[]
+ createdAt DateTime @default(now())
+}
+model Session {
+ id String @id @default(cuid())
+ tokenHash String @unique
+ userId String
+ user User @relation(fields:[userId], references:[id], onDelete:Cascade)
+ expiresAt DateTime
+ createdAt DateTime @default(now())
+ @@index([expiresAt])
+}
+model News {
+ id String @id @default(cuid())
+ slug String @unique
+ title String
+ excerpt String
+ body String
+ category String
+ image String
+ published Boolean @default(true)
+ isDemo Boolean @default(true)
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([published, createdAt])
+}
+model GameMode {
+ id String @id @default(cuid())
+ slug String @unique
+ name String
+ description String
+ details String
+ image String
+ accent String @default("cyan")
+ enabled Boolean @default(true)
+ order Int @default(0)
+}
+model Product {
+ id String @id @default(cuid())
+ slug String @unique
+ name String
+ description String
+ category String
+ price Int
+ currency String @default("VND")
+ image String
+ enabled Boolean @default(true)
+ isDemo Boolean @default(true)
+}
+model Rule {
+ id String @id @default(cuid())
+ slug String @unique
+ title String
+ body String
+ order Int @default(0)
+}
+model Link {
+ id String @id @default(cuid())
+ label String
+ url String
+ kind String
+ enabled Boolean @default(false)
+ order Int @default(0)
+}
+model SiteSetting {
+ id String @id @default("site")
+ value Json
+ updatedAt DateTime @updatedAt
+}
+model LeaderboardEntry {
+ id String @id @default(cuid())
+ metric String
+ player String
+ value Int
+ unit String
+ isDemo Boolean @default(true)
+ source String @default("Dữ liệu mẫu")
+ updatedAt DateTime @updatedAt
+ @@unique([metric,player])
+ @@index([metric,value])
+}
+model SupportTicket {
+ id String @id @default(cuid())
+ type String
+ player String
+ email String
+ subject String
+ message String
+ evidenceUrl String @default("")
+ status String @default("OPEN")
+ createdAt DateTime @default(now())
+ @@index([status, createdAt])
+}
+model RateLimit {
+ key String @id
+ count Int @default(1)
+ expiresAt DateTime
+ @@index([expiresAt])
+}
